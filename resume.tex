@@ -1,0 +1,93 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{array}
+\usepackage{avant}
+\usepackage{enumitem}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{titlesec}
+
+% Use sans-serif font
+\renewcommand{\familydefault}{\sfdefault}
+
+% Section title formatting
+\titleformat{\section}{\LARGE\raggedright}{}{0em}{}[\titlerule]
+
+% Custom column widths
+\newcolumntype{L}{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{1.9cm}}
+\newcolumntype{X}{p{6.1in}}
+\newcolumntype{Y}{p{6.0in}}
+
+\linespread{1.1}
+
+\begin{document}
+\pagestyle{empty}
+\begin{center}
+
+% kerning woo
+\Huge{M\kern-0.25mmax Friedman}\\
+\normalsize maxcfriedman@gmail.com $\cdot$ (650) 862-9023
+
+\vspace{-5mm}
+
+\section{Experience}
+\begin{tabular}{L|X}
+  \small\textsc{Nov 2014} & \large\textsc{Vungle} $\cdot$ \normalsize San Francisco, CA \\
+  \small\textsc{- Sep 2016}&\small{Senior Software Engineer, \emph{Ad Serving Team}}\newline
+  \bgroup
+  \def\arraystretch{1.5}
+  \begin{tabular}[t]{@{$\cdot$~~}Y@{}}
+    Worked on new real-time ad auction service in Go from the ground up. This service followed the OpenRTB spec and sent bid requests to other ad networks as well as to Vungle's new bidder service.\\
+    Revamped caching system from a shared Redis cluster to a subscription model with a local cache.\\
+    Ran an in-place database migration with no service interruption, splitting User collection into a new Account structure and changing relationship between Campaigns, Creatives, and Applications.\\
+    Created several micro-services including one in Scala that reads from Kafka and sends a modified message to NewRelic, and another that writes filtered events to DynamoDB.
+  \end{tabular}
+  \egroup
+\end{tabular}
+
+\vspace{10pt}
+\begin{tabular}{L|X}
+  \small\textsc{Jul 2010} & \large\textsc{Facebook} $\cdot$ \normalsize Menlo Park, CA \\
+  \small\textsc{- Aug 2014}&\small{Software Engineer, \emph{Mobile, Feed Ads Frontend}}\newline
+  \bgroup
+  \def\arraystretch{1.5}
+  \begin{tabular}[t]{@{$\cdot$~~}Y@{}}
+    Developed the ``Pages You May Like" ad unit, the first custom ad type integrated into News Feed.\\
+    Made x-outs consistent across all ad types and ensured that hidden ads will not reappear.\\
+    Created a multi-level survey tree system to specify a reason after hiding an ad.\\
+    Built auto-play video ads unit on web, including user-facing Flash player, UI for advertisers to upload and create these units, and advertiser insights UI.\\
+    Overhauled the mobile site status composer to let users tag friends, specify a location, attach a photo, and customize the privacy.
+  \end{tabular}
+  \egroup
+\end{tabular}
+
+\vspace{10pt}
+\begin{tabular}{L|X}
+  \small\textsc{Summer} & \large\textsc{Facebook} $\cdot$ \normalsize Palo Alto, CA \\
+  \small\textsc{2009}&\small{Software Engineer Intern, \emph{Mobile}}\newline
+  \bgroup
+  \def\arraystretch{1.5}
+  \begin{tabular}[t]{@{$\cdot$~~}Y@{}}
+    Revamped mobile site profile page to include a mini-feed of recent user activity in addition to wall posts from friends.\\
+    Expanded the mobile site profile page to work for businesses' pages in addition to users.
+  \end{tabular}
+  \egroup
+\end{tabular}
+
+\section{Education}
+\begin{tabular}{L|X}
+  \small\textsc{Class of} & \large\textsc{Carnegie Mellon University} $\cdot$ \normalsize Pittsburgh, PA \\
+  \small\textsc{2010} & \normalsize B.S. in Computer Science, \emph{Minor in Music Technology}\\
+  \vspace{10pt}
+  &Relevant Coursework: Operating System Design \& Implementation, Data Structures \& Algorithms, Web Application Development, Artificial Intelligence, Algorithm Design \& Analysis
+\end{tabular}
+
+\section{Expertise}
+%\begin{tabular}{L|X}
+%&
+\end{center}
+~~NodeJS,~~Go,~~HTML,~~CSS,~~AWS,~~MongoDB,~~SQL,~~Redis,~~PHP,~~Git,~~UNIX,~~Java,~~C,~~{\fontfamily{cmr}\selectfont\LaTeX}
+%\vspace{10pt}
+%\end{tabular}
+
+
+\end{document}
